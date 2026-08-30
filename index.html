@@ -1,11 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>exam</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
+
+    <div class="wrapper">
+        <header>
+            <div class="name">
+                <h1>
+                    <a href="#home">Hello!!👋</a>
+                </h1>
+            </div>
+            <nav>
+                <button class="showBtn" id="showBtn" aria-expanded="false">
+                    show
+                </button>
+                <ul id="nav-links">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About me</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Portofolio</a>
+                    </li>
+                    <li>
+                        <a href="#contacts">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+        <main>
+            <section class="home" id="home">
+                <h1>
+                    Hi!
+                </h1>
+
+                <h2>My Name Is 'Amil Hafizhun 'Alim</h2>
+
+                <h3>And Welcome To My Page</h3>
+
+                <img src="./asset/garchomp.png" alt="garchomp" class="gar">
+
+                <img src="asset/garchomp sit.png" alt="sit" class="chomp">
+            </section>
+
+
+            <section class="about" id="about">
+                <h1>About Me</h1>
+
+                <h2>I'm a student who's currently at the 2nd year of highschool, and i'm the youngest amongst my
+                    siblings.
+                    Before studying at my current school, i use to change school a couple of different times before
+                    deciding
+                    to stay at my current school instead. After entering 2nd year of highschool, my mother told me to
+                    learn
+                    how
+                    to code. So here i am trying to
+                    <button class="aboutbtn" id="aboutbtn">
+                        learn:
+                    </button>
+                    <nav class="hidden" id="hidden">
+                        <div class="flex-box">
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/HTML">
+                                    <img src="./asset/html.png" alt="html"> Html
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/CSS">
+                                    <img src="./asset/css.png" alt="CSS">
+                                    CSS
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://en.wikipedia.org/wiki/JavaScript">
+                                    <img src="./asset/javascript.png" alt="javascript">
+                                    Javascript
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </h2>
+
+                <div>
+                    <h1>
+                        Below Here Are My Portofolio That I Did While Trying To Learn
+                    </h1>
+                </div>
+
+                <div class="arrow">
+
+                    <img src="./asset/arrow.png" alt="arrow">
+
+                </div>
+
+            </section>
+
+            <section class="project" id="projects">
+
+                <h1 class="project-h1">
+                    My Portofolio
+                </h1>
+
+                <div class="project-list">
+                    <div class="my-projects">
+                        <h2>
+                            <a href="./pertemuan 4 CSS layouting/index.html">
+                                LayOuting CSS
+                            </a>
+                        </h2>
+
+                        <h3>
+                            The result of when i was learning how to do a CSS layouting.
+                        </h3>
+                    </div>
+
+                    <div class="my-projects">
+                        <h2>
+                            <a href="./pertemuan 5/JavaScript.html">Discount Calculator</a>
+                        </h2>
+
+                        <h3>
+                            A calculator use to count how much discount you're getting.
+                        </h3>
+                    </div>
+
+                    <div class="my-projects">
+                        <h2>
+                            <a href="./pertemuan 2/index.html">
+                                Data Table
+                            </a>
+                        </h2>
+
+                        <h3>
+                            My practice of making a data list, table, form, and how to use href.
+                        </h3>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contacts">
+
+            <h1>Contact Info:</h1>
+            <div class="github">
+
+                <img src="asset/github.png" alt="github" class="center2">
+                <h2>Lima126</h2>
+            </div>
+            <div class="gmail">
+
+                <img src="./asset/gmail.png" alt="gmail" class="center">
+                <h2>amilhafizhunalim@gmail.com</h2>
+
+            </div>
+
+            <p class="p">© 'Amil 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

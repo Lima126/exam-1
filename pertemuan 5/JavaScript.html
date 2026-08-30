@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+
+    <style>
+        .box {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            padding: 1em;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slideRight {
+            transform: translateX(40px);
+        }
+
+        #box-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kalkulator Hitung Diskon</h1>
+    <h2>Ketentuan Diskon</h2>
+    <ul>
+        <li>Jika belanja Rp 650.000 keatas, maka diskon 25%</li>
+        <li>Jika belanja Rp 500.000 keatas, maka diskon 15%</li>
+        <li>Selain itu, tidak dapat diskon</li>
+    </ul>
+    <div>
+        <label for="belanja">Total Belanja</label>
+        <input type="number" name="belanja" id="belanja">
+        <button id="hitungBtn">Hitung Diskon</button>
+    </div>
+    <p>Total Belanja: <span id="totalBelanja"></span></p>
+    <p>Total Diskon: <span id="totalDiskon"></span></p>
+    <p>Yang harus dibayar: <span id="paidAmount"></span></p>
+
+    <div class="box" id="box">
+        test
+    </div>
+
+    <button id="slideRightBtn">Slide right</button>
+
+    <div id="box-list">
+
+    </div>
+
+    <script>
+        document.getElementById("slideRightBtn").addEventListener('click', function () {
+            let box = document.getElementById("box")
+            box.classList.add("slideRight")
+
+            setTimeout(() => {
+                box.classList.remove("slideRight")
+            }, 1000);
+        })
+    </script>
+    <script>
+        // ambil element tombol hitung
+        let hitungBtn = document.getElementById("hitungBtn")
+
+        hitungBtn.addEventListener('click', function () {
+            // ambil element input
+            let belanjainput = document.getElementById('belanja')
+            let totalbelanja = belanjainput.value
+            // alert(`total belanja adalah Rp ${totalbelanja}`)
+
+            // list element total belanja
+            let totalBelanjaEL = document.getElementById('totalBelanja')
+            totalBelanjaEL.innerText = totalbelanja
+            // logic menghitung diskon
+            let diskon = 0
+
+            if (totalbelanja >= 650_000) {
+                diskon = 0.25
+            } else if (totalbelanja >= 500_000) {
+                diskon = 0.15
+            } else {
+                diskon + 0
+            }
+
+            let totaldiskon = totalbelanja * diskon
+            console.log(totaldiskon)
+            let totalharga = totalbelanja - totaldiskon
+            console.log(totalharga)
+            let totalDiskonEL = document.getElementById('totalDiskon')
+            totalDiskonEL.innerText = totaldiskon
+            let totalHargaEL = document.getElementById('paidAmount')
+            totalHargaEL.innerText = totalharga
+        })
+
+
+    </script>
+<script>
+    // ambil box-list
+    const boxListEL = document.getElementById('box-list')
+
+    for (let i = 1; i < 50; i++) {
+        // buat box element yg akan dimasukkan ke boxListEL
+        const boxItem = document.createElement('div')
+        boxItem.classList.add('box')
+        boxItem.innerText = `box ${i}`;
+        boxListEL.appendChild(boxItem)
+    }
+</script>
+
+    <!-- <script src="01-variabel.js"></script> -->
+    <!-- <script src="02-operator.js"></script> -->
+    <!-- <script src="03-conditional.js"></script> -->
+     <script src="04-loop.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik";
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.name {
+    margin-left: 20px;
+}
+
+div>h1>a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+div>h1>a:hover {
+    color: black;
+}
+
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: darkblue;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: black solid;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    margin-right: 20px;
+    align-items: self-end;
+}
+
+/* header nav */
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bolder;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: rgb(0, 0, 0);
+}
+
+header nav a:active {
+    color: gray;
+    border-bottom: gray 2px solid;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+.showBtn {
+    display: inline-block;
+    visibility: visible;
+    font-size: 25px;
+    font-family: "Rubik";
+}
+
+nav {
+    position: relative;
+}
+
+/* media */
+@media (min-width: 769px) {
+    .showBtn {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        min-width: 140px;
+        padding: 0;
+        background-color: darkblue;
+    }
+
+    header nav ul.nav-links-open {
+        display: flex;
+        z-index: 1001;
+    }
+
+    header ul li {
+        padding: 12px 16px;
+    }
+
+    .showBtn {
+        display: inline-block;
+        visibility: visible;
+    }
+
+    
+}
+
+/* mobile media */
+@media only screen and (max-width: 600px) {
+
+    .wrapper {
+        width: 100%;
+    }
+}
+
+.showBtn {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    transition: color 0.2s ease;
+    font: bold;
+}
+
+.showBtn:hover {
+    color: black;
+}
+
+
+/* section */
+
+section {
+    min-height: 20em;
+    border-top: black solid;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+/* section home */
+.gar {
+    width: 200px;
+    height: 200px;
+    border: black solid;
+    /* margin: 20px; */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 130em;
+    margin-top: 30px;
+    position: absolute;
+    top: 2em;
+    /* left: 132em; */
+    /* align-self: flex-end; */
+}
+
+.chomp {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 55.5em;
+    /* align-self: left; */
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+    height: 100%;
+    width: 100%;
+    /* scroll-margin-top: 90px; */
+    background-image: url("asset/pokemon-garchomp.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: sticky;
+    top: 0;
+    z-index: 0;
+}
+
+.home>h1 {
+    color: white;
+    font-size: 7rem;
+    display: block;
+    margin-right: 2.5em;
+    position: relative;
+    margin-top: 0.8em;
+    -webkit-text-stroke: 3px black;
+    text-align: right;
+}
+
+.home>h2 {
+    color: white;
+    font-size: 3em;
+    display: block;
+    margin-left: 15em;
+    margin-top: 5em;
+    margin-right: 2em;
+    -webkit-text-stroke: 3px black;
+    /* text-align: center; */
+}
+
+.home>h3 {
+    color: white;
+    font-size: 5em;
+    display: block;
+    margin-left: 7.5em;
+    margin-top: 0.5em;
+    -webkit-text-stroke: 3px black;
+    /* text-align: center; */
+}
+
+
+/* section about */
+.about {
+    border-top: black solid;
+    background-image: linear-gradient(white, white, white, whitesmoke, whitesmoke, whitesmoke);
+    min-height: 65em;
+    height: 100%;
+    width: 100%;
+}
+
+.about>h1 {
+    font-size: 3em;
+    display: block;
+    margin-left: 12em;
+    margin-top: 2em;
+    color: darkblue;
+}
+
+.about>div {
+    font-size: 1.7em;
+    display: block;
+    margin-left: 21em;
+    margin-right: 21em;
+    margin-top: 2em;
+}
+
+.about>h2 {
+    font-size: 2em;
+    display: block;
+    margin-left: 18em;
+    margin-top: 1em;
+    margin-right: 19em;
+}
+
+.aboutbtn {
+    font-weight: 700;
+    font-size: 33px;
+    font-family: "Rubik";
+    background-color: white;
+    border: none;
+    height: 50px;
+    transition: color 0.2s;
+}
+
+.aboutbtn:hover {
+    cursor: pointer;
+    color: darkblue
+}
+
+#hidden.hidden {
+    display: none;
+}
+
+#hidden div {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}
+
+#hidden a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#hidden a:hover {
+    color: darkblue;
+}
+
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+}
+
+.flex-box img {
+    width: 350px;
+    height: 200px;
+    border: black solid;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+.arrow img {
+    margin-left: 14em;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+/* section project */
+.project {
+    min-height: 50em;
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+}
+
+.project-h1 {
+    text-align: center;
+    font-size: 5em;
+    padding: 30px;
+    color: darkblue;
+}
+
+.project h2 {
+    font-size: 3em;
+}
+
+.project-list {
+    display: grid;
+    gap: 15em;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px;
+    align-items: start;
+    /* margin-left: 15em; */
+}
+
+.my-projects {
+    text-align: center;
+}
+
+.my-projects {
+    border: 5px solid darkblue;
+    /* outline: 0px black solid;
+    transition: outline-width 0.2s ease; */
+    box-shadow: 0 0 0 1px black;
+    transition: box-shadow 0.2s ease;
+    transition: border 0.1s ease;
+}
+
+.my-projects:hover {
+    /* outline: 6px solid black; */
+    box-shadow: 0 0 0 10px black;
+    border: none;
+}
+
+.my-projects a {
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: color 0.2s;
+    transition: transform 0.3s ease;
+}
+
+.my-projects a:hover {
+    color: darkblue;
+    transform: scale(1.2);
+}
+
+.my-projects h3 {
+    display: none;
+    font-size: 2em;
+    margin: 15px;
+}
+
+.my-projects:hover h3 {
+    display: block;
+}
+
+/* footer */
+footer {
+    background-color: gray;
+    min-height: 10em;
+    height: 100%;
+    width: 100%;
+    border-top: black solid;
+}
+
+footer>h1 {
+    display: block;
+    margin-left: 20px;
+}
+
+.gmail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gmail>h2 {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.gmail img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px black solid;
+    align-items: center;
+}
+
+.center {
+    display: block;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.github>h2 {
+    display: block;
+    margin-top: 17px;
+}
+
+.github img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px black solid;
+    align-items: center;
+}
+
+.center2 {
+    display: block;
+    margin-left: 20px;
+
+    margin-top: 20px;
+    width: 50%;
+}
+
+.p {
+    display: block;
+    margin-left: 0 auto;
+    font: bolder;
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}

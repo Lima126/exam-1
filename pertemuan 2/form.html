@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <style>
+        nav {
+            background-color: beige;
+            color: brown;
+            min-height: 40px;
+        }
+    </style>
+</head>
+
+<body style="background-color: aqua; padding: 4em;">
+    <h1>home page</h1>
+
+    <p>random</p>
+    <header>
+        <nav>
+            <a href="./index.html">home</a>
+            <a href="./about.html">about</a>
+            <a href="./contact.html">contact</a>
+            <a href="./table.html">table</a>
+            <a href="./form.html">form</a>
+            <a href="./data-siswa.html">data</a>
+            <a href="./table.html">table</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>html form</h1>
+
+        <form action="#" method="get">
+            <!-- nama -->
+            <div>
+                <label for="namalengkap">nama lengkap</label>
+                <input type="text" name="namalengkap" id="namalengkap">
+            </div>
+            <!-- umur -->
+            <div>
+                <label for="umur">umur</label>
+                <input type="number" name="umur" id="umur">
+            </div>
+            <!-- email -->
+            <div>
+                <label for="email">email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <!-- gender -->
+            <div>
+                <label for="gender">gender</label>
+
+                <div>
+                    <input type="radio" name="gender" id="laki" value="laki">
+                    <label for="laki">laki</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="perempuan" value="perempuan">
+                    <label for="perempuan">perempuan</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">other</label>
+                </div>
+            </div>
+            <!-- setuju -->
+            <div>
+                <input type="checkbox" name="agree" id="agree" required>
+                <label for="agree">yakin?</label>
+            </div>
+
+            <!-- select/dropdown -->
+            <div>
+                <select name="pendidikan" id="belajar">
+                    <option value="sd">sd</option>
+                    <option value="smp">smp</option>
+                    <option value="sma">sma</option>
+                    <option value="kuliah">kuliah</option>
+                </select>
+            </div>
+
+            <!-- submit -->
+            <button type="submit">simpan data</button>
+        </form>
+    </main>
+
+    <footer>
+
+        <h1>contact me</h1>
+        <ul>
+            <li>email: something2@gmail.com</li>
+        </ul>
+        <p>yea</p>
+    </footer>
+
+</body>
+
+</html>
