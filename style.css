@@ -108,6 +108,7 @@ nav {
     header nav ul.nav-links-open {
         display: flex;
         z-index: 1001;
+        border: black 2px solid;
     }
 
     header ul li {
@@ -119,7 +120,7 @@ nav {
         visibility: visible;
     }
 
-    
+
 }
 
 /* mobile media */
@@ -127,8 +128,95 @@ nav {
 
     .wrapper {
         width: 100%;
+        overflow-x: hidden;
+    }
+
+    .home {
+        background-image: linear-gradient(darkblue, lightblue, white) !important;
+    }
+
+    .gar {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .text-beside-img {
+        font-size: 3em !important;
+    }
+
+    .h2h3>h2 {
+        font-size: 1.5em !important;
+    }
+
+    .h2h3>h3 {
+        padding: 0 10px !important;
+        font-size: 1.6em !important;
+    }
+
+    .h2h3 {
+        font-size: 1.7em !important;
+        -webkit-text-stroke: 1px black !important;
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        padding-right: 40px !important;
+        padding-top: 7em !important;
+        padding-left: 40px !important;
+        margin-top: -120px;
+        line-height: 1.5;
+    }
+
+    .about>h2 {
+        font-size: 30px !important;
+        width: 70%;
+        line-height: 1.6;
+    }
+
+    
+    .flex-box {
+        flex-direction: column !important;
+    }
+    
+    .flex-box img {
+        display: none !important;
+        flex-direction: column;
+    }
+    
+    .about>div {
+        width: 80% !important;
+        font-size: 1.3em !important;
+        text-align: center;
+    }
+
+    .arrow {
+        margin-left: -80px ;
+    }
+
+    .project-list {
+        display: grid;
+        gap: 10vh !important;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(3, 2fr);
+    }
+
+    .project-h1 {
+        font-size: 70px !important;
+        margin-left: -10px !important;
+    }
+
+    .my-projects h3 {
+        display: block !important;
+    }
+
+    .github {
+        font-size: 12px;
+    }
+
+    .gmail {
+        font-size: 12px;
     }
 }
+
 
 .showBtn {
     background-color: darkblue;
@@ -148,35 +236,12 @@ nav {
 section {
     min-height: 20em;
     border-top: black solid;
-    background-color: white;
+    background-color: darkgray;
     position: relative;
     z-index: 1;
 }
 
 /* section home */
-.gar {
-    width: 200px;
-    height: 200px;
-    border: black solid;
-    /* margin: 20px; */
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 130em;
-    margin-top: 30px;
-    position: absolute;
-    top: 2em;
-    /* left: 132em; */
-    /* align-self: flex-end; */
-}
-
-.chomp {
-    display: flex;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 55.5em;
-    /* align-self: left; */
-}
 
 .home {
     display: flex;
@@ -194,36 +259,66 @@ section {
     z-index: 0;
 }
 
-.home>h1 {
-    color: white;
-    font-size: 7rem;
-    display: block;
-    margin-right: 2.5em;
-    position: relative;
-    margin-top: 0.8em;
-    -webkit-text-stroke: 3px black;
-    text-align: right;
+.gar {
+    width: 200px;
+    height: 200px;
+    border: black solid;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
 }
 
-.home>h2 {
+.chomp {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-bottom: 40px;
+    z-index: 1000;
+}
+
+/* .text-beside-img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} */
+
+.text-beside-img {
+    color: white;
+    font-size: 4em;
+    -webkit-text-stroke: 2px black;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    padding: 30px;
+    gap: 15px;
+    align-items: center;
+}
+
+.h2h3>h3 {
+    padding-right: 3em;
+    z-index: 1001;
+}
+
+.h2h3>h2 {
+    z-index: 1001;
+}
+
+.h2h3 {
+    -webkit-text-stroke: 2px black;
     color: white;
     font-size: 3em;
-    display: block;
-    margin-left: 15em;
-    margin-top: 5em;
-    margin-right: 2em;
-    -webkit-text-stroke: 3px black;
-    /* text-align: center; */
-}
-
-.home>h3 {
-    color: white;
-    font-size: 5em;
-    display: block;
-    margin-left: 7.5em;
-    margin-top: 0.5em;
-    -webkit-text-stroke: 3px black;
-    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    padding-right: 80px;
+    padding-top: 7em;
 }
 
 
@@ -234,43 +329,45 @@ section {
     min-height: 65em;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about>h1 {
     font-size: 3em;
     display: block;
-    margin-left: 12em;
-    margin-top: 2em;
+    padding: 30px;
     color: darkblue;
 }
 
 .about>div {
+    width: 40%;
     font-size: 1.7em;
-    display: block;
-    margin-left: 21em;
-    margin-right: 21em;
-    margin-top: 2em;
+    text-align: center;
 }
 
 .about>h2 {
     font-size: 2em;
     display: block;
-    margin-left: 18em;
-    margin-top: 1em;
-    margin-right: 19em;
+    padding-right: 500px;
+    padding-left: 500px;
+    padding-bottom: 45px;
 }
 
 .aboutbtn {
     font-weight: 700;
     font-size: 33px;
     font-family: "Rubik";
-    background-color: white;
+    background: none;
     border: none;
     height: 50px;
     transition: color 0.2s;
+    transition: font 0.3s ease;
 }
 
 .aboutbtn:hover {
+    font-size: 45px;
     cursor: pointer;
     color: darkblue
 }
@@ -286,13 +383,12 @@ section {
 }
 
 #hidden a {
-    color: black;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 #hidden a:hover {
-    color: darkblue;
+    color: darkblue !important;
 }
 
 
@@ -311,8 +407,27 @@ section {
     object-fit: cover;
 }
 
+.flex-html a {
+    color: orange;
+    -webkit-text-stroke: 1px yellow;
+}
+
+.flex-css a {
+    color: blue;
+    -webkit-text-stroke: 1px darkblue;
+}
+
+.flex-js a {
+    color: rgb(255, 255, 0);
+    -webkit-text-stroke: 1px orange;
+}
+
+.about>div>h1 {
+    padding: 0;
+}
+
 .arrow img {
-    margin-left: 14em;
+    padding-top: 30px;
     max-height: 400px;
     max-width: 400px;
 }
